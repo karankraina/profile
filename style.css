@@ -1,0 +1,122 @@
+:root {
+    --yellow: #ffc600;
+    --primary: rgb(80, 5, 219);
+    --dark: #000000;
+    --light: #FFFFFF;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--yellow);
+}
+
+body {
+    font-family: Tahoma;
+    color: var(--dark);
+    padding: 10px;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("images/dp.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    opacity: 0.2;
+    height: 100%;
+    width: 100%;
+}
+
+/* Navbar Styles */
+
+nav div.navbar {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    list-style: none;
+}
+
+nav ul li h2 {
+    text-decoration: none;
+    font-family: Tahoma;
+    color: #FFF;
+    margin: 5px auto;
+    display: block;
+    padding: 5px 20px;
+    border-radius: 3px;
+    font-weight: 200;
+    text-shadow: 1px 1px 0 black;
+}
+
+nav ul li span:hover, nav ul li span:focus {
+    color: var(--primary);
+    transform: scale(1.1);
+}
+
+/* Homepage Styles */
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    max-width: calc(100vw-20px);
+}
+
+div.brand-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand-content h1 {
+    font-family: Tahoma;
+    font-size: 3.5em;
+    text-shadow: 2px 2px 2px var(--primary);
+}
+.brand-content p {
+    font-family: Tahoma;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 3px var(--primary);
+    text-align: center;
+    font-weight: bold;
+}
+
+span.highlight {
+    background-color: var(--primary);
+    display: inline-block;
+    padding: 0;
+    transform: skew(20deg) rotate(-5deg);
+}
+
+span.highlight h2 {
+    display: inline-block;
+    padding: 5px 10px;
+    transform: skew(-20deg) rotate(5deg);
+    text-shadow: 1px 2px black;
+    margin: 0;
+    font-size: 2em;
+}

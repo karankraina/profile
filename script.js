@@ -1,13 +1,18 @@
-document.addEventListener('keydown', function (event) {
-    const { keyCode } = event;
-    console.log({ keyCode });
-    const hitKey = document.querySelector(`.key[data-keycode="${keyCode}"]`);
-    if (!hitKey) {
-        return;
-    }
-    hitKey.classList.add('pressed');
-    setTimeout(() => {
-        hitKey.classList.remove('pressed')
-    }, 0.7);
-});
 
+// Show or Hide the social section
+function toggleSocial() {
+    const socialSection = document.getElementById('social');
+    socialSection.classList.toggle('hide-this');
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('Document has been loaded');
+    const socialTogglerButton = document.getElementById('socialToggler');
+    console.log(socialTogglerButton);
+
+    // Add event istener for button click
+    socialTogglerButton.addEventListener('click', function () {
+        console.log('Clicked');
+        toggleSocial();
+    })
+});
